@@ -7,7 +7,5 @@
 
 </script>
 <style lang="scss">
-body {
-    background: #231f20;
-}
+
 </style>
