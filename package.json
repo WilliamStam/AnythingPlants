@@ -1,0 +1,28 @@
+{
+    "name": "anythingplants",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "vite & npm update",
+        "dist": "vue-tsc --noEmit --skipLibCheck && vite build && node build/zip.js",
+        "bump": "node build/bump.js",
+        "build": "vite build",
+        "serve": "vite preview",
+        "update": "npm update"
+    },
+    "dependencies": {
+        "vue": "^3.2",
+        "vue-router": "^4.1",
+        "pinia": "^2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18",
+        "@typescript-eslint/eslint-plugin": "^5",
+        "@typescript-eslint/parser": "^5",
+        "@vitejs/plugin-vue": "^3",
+        "archiver": "^5",
+        "sass": "^1",
+        "typescript": "^4",
+        "vite": "^3",
+        "vue-tsc": "^0"
+    }
+}
