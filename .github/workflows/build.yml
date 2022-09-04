@@ -25,12 +25,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      # Runs a single command using the runners shell
-      #- name: Run a one-line script
-      #  run: npm run build
-
-      # Runs a set of commands using the runners shell
-      - name: Build project
       - run: npm install
       - run: npm run build
