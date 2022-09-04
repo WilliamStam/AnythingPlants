@@ -15,4 +15,6 @@ jobs:
           node-version: 18
       - run: npm install
       - run: npm run build
-      - uses: actions/deploy-pages@v1.0.10
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
