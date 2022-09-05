@@ -1,0 +1,31 @@
+// Functions come first
+@import "node_modules/bootstrap/scss/functions";
+
+  // Optional variable overrides here
+$custom-color: #df711b;
+$custom-theme-colors: (
+   "custom": $custom-color
+);
+
+  // Variables come next
+  @import "node_modules/bootstrap/scss/variables";
+
+ // Optional Sass map overrides here
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+ // Followed by our default maps
+ @import "node_modules/bootstrap/scss/bootstrap";
+
+.btn-light {
+    @include button-variant($light, $border-color);
+}
+.btn-outline-light {
+    @include button-variant(transparentize($light,1), $border-color);
+}
+
+.modal-title {
+        color: $body-color;
+}
+.col-form-label, .col-check-label {
+    text-align: right;
+}

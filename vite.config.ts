@@ -21,16 +21,32 @@ export default ({mode}: { mode: string }) => {
         },
 
         css: {
-            // preprocessorOptions: {
-            //     scss: {
-            //         additionalData: `@import "@/assets/css/variables";`,
-            //         charset: false
-            //     }
-            // },
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `@import "@/assets/css/variables";`,
+                    charset: false
+                }
+            },
+        },
+        build: {
+            rollupOptions: {
+                external: [
+                    /\/media\/.*/,
+                ],
+            },
         },
 
         server: {
-            port: 3000,
+            host:"portal.localhost",
+            proxy: {
+                // string shorthand
+                '/media': {
+                    target: process.env.VITE_BACKEND,
+                    changeOrigin: true,
+                    secure: false,
+                },
+
+            }
         }
     });
 }
