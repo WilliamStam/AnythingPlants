@@ -1,9 +1,48 @@
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+
+
+$navy: #34495e;
+$blue: #3498db;
+$indigo: #9b59b6;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #e74c3c;
+$deep-red: #910f21;
+$orange: #e67e22;
+$yellow: #ffb606;
+$green: #62cb31;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "error": $danger,
+    "light": $light,
+    "dark": $dark,
+    "transparent": rgba(250, 250, 250, 0),
+
+);
+
 $body-bg: #f9f9f9;
 $body-color: #666666;
 
+
+$primary: $navy;
+$secondary: $indigo;
+$success: $green;
+$info: $blue;
+$warning: $yellow;
+$danger: $red;
+$light: $white;
+$dark: $gray-800;
 
 $font-size-base: 1rem;
 
@@ -17,3 +56,6 @@ $legend-font-size: 0.8rem;
 
 $card-bg: transparent;
 $card-cap-bg: transparent;
+
+
+$enable-shadows: true;
